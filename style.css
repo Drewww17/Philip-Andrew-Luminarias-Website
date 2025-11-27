@@ -32,8 +32,7 @@ body {
 }
 
 body {
-  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -76,7 +75,7 @@ img {
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 50;
 }
 
 .header-content {
@@ -99,18 +98,18 @@ img {
 }
 
 .name {
-  font-family: "Abril Fatface", "Georgia", serif;
-  font-size: clamp(2.2rem, 3vw + 0.5rem, 2.7rem);
-  margin: 0 0 0.2rem;
-  letter-spacing: 0.02em;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.3rem, 3vw + 0.5rem, 2.8rem);
+  margin: 0 0 0.15rem;
+  letter-spacing: 0.01em;
   color: #1b140f;
 }
 
 .tagline {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.11em;
   color: var(--accent-dark);
 }
 
@@ -126,6 +125,7 @@ img {
   flex-direction: column;
   gap: 0.18rem;
   margin-bottom: 0.7rem;
+  margin-top: 0.4rem;
 }
 
 .header-lines span {
@@ -193,7 +193,7 @@ img {
 }
 
 .nav-container a {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--accent-dark);
@@ -228,22 +228,20 @@ img {
   border-radius: 999px;
   border: 1px solid transparent;
   font-size: 0.9rem;
-  font-weight: 500;
   cursor: pointer;
   transition: transform var(--transition-fast),
-    box-shadow var(--transition-fast), background var(--transition-fast),
-    border-color var(--transition-fast), color var(--transition-fast);
+    box-shadow var(--transition-fast), background var(--transition-fast);
 }
 
 .btn.primary {
   background: var(--accent);
-  color: #fffdf7;
+  color: #fff9ed;
   box-shadow: 0 10px 26px rgba(147, 103, 41, 0.45);
 }
 
 .btn.primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 14px 32px rgba(147, 103, 41, 0.55);
+  box-shadow: 0 15px 32px rgba(147, 103, 41, 0.55);
 }
 
 .btn.secondary {
@@ -253,15 +251,15 @@ img {
 }
 
 .btn.secondary:hover {
-  background: rgba(196, 154, 71, 0.08);
+  background: rgba(196, 154, 71, 0.1);
 }
 
 /* Sections */
 .section h2 {
-  font-family: "Abril Fatface", "Georgia", serif;
-  font-size: 1.6rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
   margin: 0 0 1rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #1b140f;
 }
@@ -269,35 +267,36 @@ img {
 .section h2::after {
   content: "";
   display: block;
-  margin-top: 0.25rem;
-  width: 80px;
+  margin-top: 0.3rem;
+  width: 75px;
   height: 3px;
   border-radius: 999px;
   background: var(--accent-dark);
 }
 
-/* Layout grids */
+/* Layout Grids */
 .two-column {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
   gap: 2rem;
-  align-items: flex-start;
+  align-items: start;
 }
 
-/* Highlight / Aside */
+/* Highlight Box */
 .highlight-box {
   background: var(--surface);
   border-radius: var(--radius-xl);
-  padding: 1.5rem 1.7rem;
+  padding: 1.6rem;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-subtle);
 }
 
 .highlight-box h3 {
+  font-family: "Playfair Display", serif;
   margin-top: 0;
-  margin-bottom: 0.6rem;
-  font-size: 0.95rem;
-  letter-spacing: 0.16em;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--accent-dark);
 }
@@ -313,23 +312,23 @@ img {
 .card {
   background: var(--surface);
   border-radius: var(--radius-xl);
-  padding: 1.5rem 1.35rem 1.35rem;
+  padding: 1.5rem 1.35rem;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
 }
 
 .card h3 {
+  font-family: "Playfair Display", serif;
   margin: 0 0 0.4rem;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.15rem;
 }
 
 .card .role {
-  margin: 0 0 0.7rem;
-  font-size: 0.83rem;
+  margin: 0 0 0.6rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
   color: var(--accent-dark);
   letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
 .card-text {
@@ -339,16 +338,16 @@ img {
 }
 
 .card-list {
-  padding-left: 1.1rem;
+  padding-left: 1rem;
   margin: 0.2rem 0 0;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
 }
 
 /* Pills */
 .pill-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.7rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -356,14 +355,14 @@ img {
 
 .pill-list li {
   font-size: 0.75rem;
-  padding: 0.18rem 0.6rem;
+  padding: 0.22rem 0.65rem;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface-alt);
   color: var(--accent-dark);
 }
 
-/* Skills */
+/* Skills Grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -372,33 +371,35 @@ img {
 }
 
 .skills-grid h3 {
+  font-family: "Playfair Display", serif;
   margin-top: 0;
-  margin-bottom: 0.6rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.14em;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent-dark);
 }
 
 /* Certifications */
 .cert-grid {
-  margin-top: 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.2rem;
+  margin-top: 1.5rem;
 }
 
 .cert-card {
   background: var(--surface);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
   padding: 1.1rem 1.2rem;
+  border: 1px solid var(--border);
   box-shadow: var(--shadow-subtle);
 }
 
 .cert-card h3 {
+  font-family: "Playfair Display", serif;
   margin: 0 0 0.3rem;
-  font-size: 0.98rem;
+  font-size: 1.05rem;
 }
 
 .cert-card p {
@@ -409,9 +410,10 @@ img {
 
 .cert-meta {
   font-size: 0.8rem;
+  color: var(--muted);
 }
 
-/* Education */
+/* Education Timeline */
 .timeline {
   margin-top: 1.5rem;
   border-left: 2px solid var(--border);
@@ -426,7 +428,7 @@ img {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -1.7rem;
+  left: -1.6rem;
   top: 0.25rem;
   width: 11px;
   height: 11px;
@@ -436,14 +438,16 @@ img {
 }
 
 .timeline-item h3 {
+  font-family: "Playfair Display", serif;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: var(--accent-dark);
 }
 
 .timeline-role {
-  margin: 0.25rem 0;
+  margin: 0.2rem 0;
   font-size: 0.9rem;
-  color: var(--accent-dark);
+  color: var(--muted);
 }
 
 .timeline-meta {
@@ -456,7 +460,7 @@ img {
 .contact-box {
   background: var(--surface);
   border-radius: var(--radius-xl);
-  padding: 1.5rem 1.7rem;
+  padding: 1.6rem;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
 }
@@ -475,7 +479,7 @@ img {
 
 .footer-content {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--muted);
 }
 
