@@ -1,25 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Philip Andrew Luminarias | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Optional: Google fonts that match your logo style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-content">
-      <div>
-        <h1 class="name">Philip Andrew Luminarias</h1>
-        <p class="tagline">Bachelor of Science in Computer Science</p>
-        <p class="sub-tagline">
-          Backend Development • Machine Learning • Data Analytics • Computer Vision
-        </p>
-        <div class="header-actions">
-          <a href="#projects" class="btn primary">View Projects</a>
-          <a href="#contact" class="btn secondary">Contact Me</a>
+      <div class="brand">
+        <img src="logo.png" alt="Drew personal logo" class="logo" />
+        <div>
+          <h1 class="name">Philip Andrew Luminarias</h1>
+          <p class="tagline">Bachelor of Science in Computer Science</p>
+          <p class="sub-tagline">
+            Backend Development • Machine Learning • Data Analytics • Computer Vision
+          </p>
+          <div class="header-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="header-actions">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+          </div>
         </div>
       </div>
+
       <div class="header-meta">
         <p>Davao City, Philippines</p>
         <p><a href="tel:+639952904537">(+63) 995-290-4537</a></p>
@@ -34,6 +46,7 @@
         </div>
       </div>
     </div>
+
     <nav class="main-nav">
       <div class="container nav-container">
         <a href="#about">About</a>
@@ -45,335 +58,5 @@
       </div>
     </nav>
   </header>
+  <!-- keep the rest of your HTML the same -->
 
-  <main>
-    <!-- About / Summary -->
-    <section id="about" class="section">
-      <div class="container two-column">
-        <div>
-          <h2>Professional Summary</h2>
-          <p>
-            Highly motivated and technically proficient Computer Science student with
-            hands-on experience in backend development, machine learning, computer
-            vision, and data analytics. I enjoy building organized, functional, and
-            scalable systems—from REST APIs to ML-powered applications—through both
-            academic projects and independent learning.
-          </p>
-          <p>
-            Comfortable working across the stack using modern technologies such as
-            Node.js, Express, Prisma ORM, PostgreSQL, YOLOv, Python, C#, and Java.
-            I’m actively looking for opportunities in software engineering, machine
-            learning, and data-driven development.
-          </p>
-        </div>
-        <aside class="highlight-box">
-          <h3>Career Objective</h3>
-          <p>
-            To apply and expand my knowledge in software development, machine learning,
-            and data-driven technologies by contributing to impactful real-world
-            projects in an innovative company, while supporting organizational growth
-            through efficient problem-solving and high-quality work.
-          </p>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section section-alt">
-      <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-          <article class="card">
-            <h3>BookWise: ML-Enhanced School Resource Booking System</h3>
-            <p class="role">Backend Project Developer</p>
-            <p class="card-text">
-              Developed the backend of a school resource booking and tracking system
-              with authentication and role-based access for admins, faculty, and
-              students.
-            </p>
-            <ul class="pill-list">
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>Prisma ORM</li>
-              <li>PostgreSQL</li>
-              <li>JWT Auth</li>
-              <li>Docker</li>
-            </ul>
-            <ul class="card-list">
-              <li>Designed REST APIs for rooms, labs, equipment, and booking history.</li>
-              <li>Implemented JWT-based authentication with sessions and role-based access.</li>
-              <li>Containerized backend with Docker for consistent development and deployment.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Systematic Pineapple Ripeness Phase Detection</h3>
-            <p class="role">Lead Project Developer</p>
-            <p class="card-text">
-              Computer vision system using YOLOv to detect and classify pineapple
-              ripeness phases for near real-time quality assessment.
-            </p>
-            <ul class="pill-list">
-              <li>YOLOv8/11/12</li>
-              <li>Python</li>
-              <li>Computer Vision</li>
-              <li>ML Pipelines</li>
-            </ul>
-            <ul class="card-list">
-              <li>Collected, labeled, and preprocessed image datasets with augmentation.</li>
-              <li>Trained and fine-tuned YOLO models with hyperparameter tuning.</li>
-              <li>Integrated detection into an application with camera and upload support.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Coffee &amp; Co: POS / Management Application</h3>
-            <p class="role">Lead Project Developer</p>
-            <p class="card-text">
-              Desktop POS and inventory management solution designed for small and
-              medium enterprises.
-            </p>
-            <ul class="pill-list">
-              <li>C#</li>
-              <li>.NET</li>
-              <li>SQL Database</li>
-              <li>Desktop App</li>
-            </ul>
-            <ul class="card-list">
-              <li>Implemented product catalog, sales processing, and daily sales summaries.</li>
-              <li>Built inventory tracking with low-stock indicators.</li>
-              <li>Added basic analytics for sales and stock monitoring.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>CEA Slayers: 2D Python Game</h3>
-            <p class="role">Game Design &amp; Project Head</p>
-            <p class="card-text">
-              2D arcade-style game developed with Python, featuring multiple levels and
-              enemy types.
-            </p>
-            <ul class="pill-list">
-              <li>Python</li>
-              <li>Pygame</li>
-              <li>OOP</li>
-              <li>Game Design</li>
-            </ul>
-            <ul class="card-list">
-              <li>Used OOP to manage player, enemy, and game states.</li>
-              <li>Coordinated a small team for asset creation and testing.</li>
-              <li>Balanced gameplay for difficulty and engagement.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div>
-            <h3>Programming Languages</h3>
-            <ul class="pill-list">
-              <li>C</li>
-              <li>C#</li>
-              <li>C++</li>
-              <li>Java</li>
-              <li>Python</li>
-              <li>R</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Backend Development</h3>
-            <ul class="pill-list">
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>Prisma ORM</li>
-              <li>PostgreSQL</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Frontend &amp; UI/UX</h3>
-            <ul class="pill-list">
-              <li>React</li>
-              <li>HTML &amp; CSS</li>
-              <li>Figma</li>
-              <li>Wireframing</li>
-              <li>Prototyping</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Data &amp; Machine Learning</h3>
-            <ul class="pill-list">
-              <li>YOLOv Algorithm</li>
-              <li>Scikit-learn</li>
-              <li>Pandas</li>
-              <li>NumPy</li>
-              <li>Data Visualization (basic)</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Tools &amp; Platforms</h3>
-            <ul class="pill-list">
-              <li>Git</li>
-              <li>Docker</li>
-              <li>MATLAB</li>
-              <li>Microsoft 365</li>
-              <li>Google Workspace</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Soft Skills</h3>
-            <ul class="pill-list">
-              <li>Time Management</li>
-              <li>Adaptability &amp; Flexibility</li>
-              <li>Team Leadership</li>
-              <li>Initiative</li>
-              <li>Problem-Solving</li>
-              <li>Communication</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Languages</h3>
-            <ul class="pill-list">
-              <li>English</li>
-              <li>Tagalog</li>
-              <li>Cebuano</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" class="section section-alt">
-      <div class="container">
-        <h2>Certifications</h2>
-        <div class="cert-grid">
-          <article class="cert-card">
-            <h3>IT Specialist - Java</h3>
-            <p>Certiport – A Pearson VUE Business</p>
-            <p class="cert-meta">Issued Nov 2025 · Expires Nov 2030</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>IT Specialist - Data Analytics</h3>
-            <p>Certiport – A Pearson VUE Business</p>
-            <p class="cert-meta">Issued Nov 2025 · Expires Nov 2030</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>Microsoft Office Specialist: Excel Associate</h3>
-            <p>Microsoft</p>
-            <p class="cert-meta">Issued Oct 2025 · Expires Oct 2030</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>Data Mining Methods</h3>
-            <p>University of Colorado Boulder</p>
-            <p class="cert-meta">Issued Sep 2025</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>What is Data Science?</h3>
-            <p>IBM</p>
-            <p class="cert-meta">Issued Jul 2025</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>Data Science Orientation</h3>
-            <p>IBM</p>
-            <p class="cert-meta">Issued Jun 2025</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>Foundational MATLAB</h3>
-            <p>MathWorks</p>
-            <p class="cert-meta">Issued Oct 2024</p>
-          </article>
-
-          <!-- UX / Cybersecurity / Productivity -->
-          <article class="cert-card">
-            <h3>Foundations of UX Design &amp; Figma Prototyping</h3>
-            <p>Google</p>
-            <p class="cert-meta">Multiple courses · Issued 2025</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>Foundations of Cybersecurity</h3>
-            <p>Google</p>
-            <p class="cert-meta">Issued Apr 2024</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>Intro to Computers &amp; Productivity Software</h3>
-            <p>HKUST</p>
-            <p class="cert-meta">Issued Sep 2025</p>
-          </article>
-
-          <article class="cert-card">
-            <h3>Intro to UX Design</h3>
-            <p>Georgia Institute of Technology</p>
-            <p class="cert-meta">Issued May 2025</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="section">
-      <div class="container">
-        <h2>Education</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>Mapúa Malayan Colleges Mindanao</h3>
-            <p class="timeline-role">Bachelor of Science in Computer Science</p>
-            <p class="timeline-meta">Davao City · Aug 2023 – Present</p>
-          </div>
-          <div class="timeline-item">
-            <h3>Agusan National High School</h3>
-            <p class="timeline-role">High School &amp; Senior High School</p>
-            <p class="timeline-meta">Butuan City · Jun 2015 – Aug 2023</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section section-alt">
-      <div class="container two-column">
-        <div>
-          <h2>Get in Touch</h2>
-          <p>
-            I’m open to internship and entry-level opportunities in software engineering,
-            backend development, machine learning, and data analytics. If you think I could
-            be a good fit for your team or project, feel free to contact me.
-          </p>
-        </div>
-        <div class="contact-box">
-          <p><strong>Email:</strong> <a href="mailto:paluminarias@gmail.com">paluminarias@gmail.com</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+639952904537">(+63) 995-290-4537</a></p>
-          <p><strong>Location:</strong> New Washington Village, Ma-a, Davao City, 8000</p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/Drewww17" target="_blank" rel="noopener noreferrer">github.com/Drewww17</a></p>
-          <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Philip Andrew Luminarias</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; <span id="year"></span> Philip Andrew Luminarias. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    // Set current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
