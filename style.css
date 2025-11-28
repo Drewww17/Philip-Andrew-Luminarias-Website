@@ -1,493 +1,307 @@
-:root {
-  /* Drew logo palette */
-  --bg: #fdf3dd;
-  --bg-alt: #f7e5c5;
-  --surface: #ffffff;
-  --surface-alt: #f8ead2;
-  --text: #241814;
-  --muted: #7c5b45;
-  --accent: #c49a47;
-  --accent-dark: #4c3425;
-  --border: #e2c9a5;
-
-  --radius-lg: 18px;
-  --radius-xl: 22px;
-  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.12);
-  --shadow-subtle: 0 10px 26px rgba(0, 0, 0, 0.08);
-  --transition-fast: 0.18s ease-out;
-  --max-width: 1100px;
-}
-
-/* RESET */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-}
-
-a {
-  color: var(--accent-dark);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* LAYOUT */
-.container {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.section {
-  padding: 4rem 0;
-}
-
-.section-alt {
-  background: var(--bg-alt);
-}
-
-/* HEADER */
-.site-header {
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  align-items: center;
-  padding: 1.4rem 0 1.1rem;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.logo {
-  height: 70px;
-  width: auto;
-}
-
-.name {
-  font-family: "Lora", serif;
-  font-size: clamp(2.3rem, 3vw + 0.5rem, 2.8rem);
-  margin: 0 0 0.2rem;
-  letter-spacing: 0.01em;
-  color: #1b140f;
-}
-
-.tagline {
-  margin: 0;
-  font-size: 0.92rem;
-  text-transform: uppercase;
-  letter-spacing: 0.11em;
-  color: var(--accent-dark);
-}
-
-.sub-tagline {
-  margin: 0.35rem 0 0.8rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-/* Decorative lines under name */
-.header-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 0.18rem;
-  margin-bottom: 0.7rem;
-}
-
-.header-lines span {
-  display: block;
-  height: 4px;
-  background: #1b140f;
-  border-radius: 999px;
-}
-
-.header-lines span:nth-child(1) { width: 130px; }
-.header-lines span:nth-child(2) { width: 170px; }
-.header-lines span:nth-child(3) { width: 80px; }
-
-.header-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-/* HEADER RIGHT SIDE */
-.header-meta {
-  text-align: right;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.header-meta p {
-  margin: 0.1rem 0;
-}
-
-.social-links {
-  margin-top: 0.6rem;
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
-
-.social-links a {
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.7);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-/* NAV */
-.main-nav {
-  border-top: 1px solid var(--border);
-  background: #f8eeda;
-}
-
-.nav-container {
-  display: flex;
-  gap: 1.5rem;
-  padding: 0.6rem 0;
-  overflow-x: auto;
-}
-
-.nav-container a {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--accent-dark);
-  position: relative;
-  padding-bottom: 0.2rem;
-  white-space: nowrap;
-}
-
-.nav-container a::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 2px;
-  border-radius: 999px;
-  background: var(--accent-dark);
-  transform: scaleX(0);
-  transition: transform var(--transition-fast);
-}
-
-.nav-container a:hover::after {
-  transform: scaleX(1);
-}
-
-/* BUTTONS */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.65rem 1.3rem;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: var(--transition-fast);
-}
-
-.btn.primary {
-  background: var(--accent);
-  color: #fffaf2;
-  box-shadow: 0 10px 26px rgba(147, 103, 41, 0.45);
-}
-
-.btn.primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 32px rgba(147, 103, 41, 0.55);
-}
-
-.btn.secondary {
-  background: transparent;
-  border: 1px solid var(--accent-dark);
-  color: var(--accent-dark);
-}
-
-.btn.secondary:hover {
-  background: rgba(196,154,71,0.1);
-}
-
-/* SECTION HEADINGS */
-.section h2 {
-  font-family: "Lora", serif;
-  font-size: 1.8rem;
-  margin: 0 0 1rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #1b140f;
-}
-
-.section h2::after {
-  content: "";
-  display: block;
-  margin-top: 0.35rem;
-  width: 80px;
-  height: 3px;
-  border-radius: 999px;
-  background: var(--accent-dark);
-}
-
-/* GRID LAYOUTS */
-.two-column {
-  display: grid;
-  grid-template-columns: 2fr 1.3fr;
-  gap: 2rem;
-}
-
-/* HIGHLIGHT BOX */
-.highlight-box {
-  background: var(--surface);
-  border-radius: var(--radius-xl);
-  padding: 1.6rem;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-subtle);
-}
-
-.highlight-box h3 {
-  font-family: "Lora", serif;
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--accent-dark);
-}
-
-/* PROJECT CARDS */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 1.8rem;
-  margin-top: 1.5rem;
-}
-
-.card {
-  background: var(--surface);
-  border-radius: var(--radius-xl);
-  padding: 1.5rem;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-}
-
-.card h3 {
-  font-family: "Lora", serif;
-  margin: 0 0 0.4rem;
-  font-size: 1.2rem;
-}
-
-.card .role {
-  margin: 0 0 0.6rem;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: var(--accent-dark);
-  letter-spacing: 0.14em;
-}
-
-.card-text {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-bottom: 0.8rem;
-}
-
-.card-list {
-  padding-left: 1rem;
-  margin: 0.2rem 0 0;
-  font-size: 0.9rem;
-}
-
-/* SKILL PILLS */
-.pill-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 0.7rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.pill-list li {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.68rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface-alt);
-  color: var(--accent-dark);
-}
-
-/* SKILLS GRID */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
-  gap: 1.4rem;
-  margin-top: 1.5rem;
-}
-
-.skills-grid h3 {
-  font-family: "Lora", serif;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  color: var(--accent-dark);
-}
-
-/* CERTIFICATIONS */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 1.2rem;
-  margin-top: 1.5rem;
-}
-
-.cert-card {
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-  padding: 1.2rem;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-subtle);
-}
-
-.cert-card h3 {
-  font-family: "Lora", serif;
-  margin: 0 0 0.3rem;
-  font-size: 1.05rem;
-}
-
-.cert-card p {
-  margin: 0.1rem 0;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.cert-meta {
-  font-size: 0.8rem;
-}
-
-/* EDUCATION */
-.timeline {
-  margin-top: 1.5rem;
-  border-left: 2px solid var(--border);
-  padding-left: 1.3rem;
-}
-
-.timeline-item {
-  margin-bottom: 1.3rem;
-  position: relative;
-}
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -1.6rem;
-  top: 0.25rem;
-  width: 11px;
-  height: 11px;
-  background: var(--accent-dark);
-  border-radius: 999px;
-  box-shadow: 0 0 0 4px rgba(196,154,71,0.35);
-}
-
-.timeline-item h3 {
-  font-family: "Lora", serif;
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.timeline-role {
-  margin: 0.2rem 0;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.timeline-meta {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-/* CONTACT */
-.contact-box {
-  background: var(--surface);
-  border-radius: var(--radius-xl);
-  padding: 1.6rem;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-}
-
-.contact-box p {
-  margin: 0.2rem 0;
-  font-size: 0.9rem;
-}
-
-/* FOOTER */
-.site-footer {
-  padding: 1.6rem 0 2rem;
-  border-top: 1px solid var(--border);
-  background: #f8eeda;
-}
-
-.footer-content {
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .header-meta {
-    text-align: left;
-  }
-}
-
-@media (max-width: 600px) {
-  .section {
-    padding: 3rem 0;
-  }
-  .logo {
-    height: 60px;
-  }
-}
-
-  .logo {
-    height: 60px;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philip Andrew Luminarias | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts: Inter (body) + Inter Tight (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="brand">
+        <img src="logo.png" alt="Drew personal logo" class="logo" />
+
+        <div>
+          <h1 class="name">Philip Andrew Luminarias</h1>
+          <p class="tagline">Bachelor of Science in Computer Science</p>
+          <p class="sub-tagline">
+            Backend Development • Machine Learning • Data Analytics • Computer Vision
+          </p>
+
+          <div class="header-lines">
+            <span></span><span></span><span></span>
+          </div>
+
+          <div class="header-actions">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-meta">
+        <p>Davao City, Philippines</p>
+        <p><a href="tel:+639952904537">(+63) 995-290-4537</a></p>
+        <p><a href="mailto:paluminarias@gmail.com">paluminarias@gmail.com</a></p>
+
+        <div class="social-links">
+          <a href="https://github.com/Drewww17" target="_blank">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <div class="container nav-container">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container two-column">
+        <div>
+          <h2>Professional Summary</h2>
+          <p>
+            I am a Computer Science student with strong foundations in backend development,
+            machine learning, data analytics, and computer vision. I specialize in building
+            efficient, scalable, and modern systems using current industry technologies.
+          </p>
+          <p>
+            My work focuses on delivering clean architecture, optimized workflows, and
+            problem-solving approaches that combine both engineering and design thinking.
+          </p>
+        </div>
+
+        <aside class="highlight-box">
+          <h3>Career Objective</h3>
+          <p>
+            To contribute to real-world software development and AI-driven solutions while
+            continuously growing my technical skills, leadership, and innovation mindset.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2>Featured Projects</h2>
+
+        <div class="projects-grid">
+
+          <article class="card">
+            <h3>BookWise: School Resource Booking System</h3>
+            <p class="role">Backend Developer</p>
+            <p class="card-text">
+              A full backend system with authentication, session management, equipment/room booking,
+              and admin dashboards.
+            </p>
+            <ul class="pill-list">
+              <li>Node.js</li><li>Express</li><li>Prisma</li>
+              <li>PostgreSQL</li><li>Docker</li><li>JWT Auth</li>
+            </ul>
+            <ul class="card-list">
+              <li>Designed complete REST API architecture</li>
+              <li>Implemented secure authentication</li>
+              <li>Dockerized backend for deployment consistency</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Pineapple Ripeness Detection</h3>
+            <p class="role">Lead Developer</p>
+            <p class="card-text">
+              A YOLO-powered computer vision model that classifies pineapple ripeness stages.
+            </p>
+            <ul class="pill-list">
+              <li>YOLOv8–v12</li><li>Python</li><li>Computer Vision</li>
+            </ul>
+            <ul class="card-list">
+              <li>Produced and augmented dataset</li>
+              <li>Trained and fine-tuned YOLO models</li>
+              <li>Integrated real-time detection system</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Coffee & Co POS System</h3>
+            <p class="role">Lead Developer</p>
+            <p class="card-text">Desktop point-of-sale with inventory management.</p>
+            <ul class="pill-list">
+              <li>C#</li><li>.NET</li><li>SQL</li>
+            </ul>
+            <ul class="card-list">
+              <li>Built sales, products, and stock modules</li>
+              <li>Added reporting and daily summaries</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>CEA Slayers 2D Game</h3>
+            <p class="role">Game Lead</p>
+            <p class="card-text">A Python arcade-style game with OOP structure.</p>
+            <ul class="pill-list">
+              <li>Python</li><li>Pygame</li><li>OOP</li>
+            </ul>
+            <ul class="card-list">
+              <li>Built game loop and entity systems</li>
+              <li>Designed levels and enemy mechanics</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+
+          <div>
+            <h3>Programming</h3>
+            <ul class="pill-list">
+              <li>C</li><li>C#</li><li>C++</li><li>Java</li>
+              <li>Python</li><li>R</li><li>JavaScript</li><li>TypeScript</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Backend</h3>
+            <ul class="pill-list">
+              <li>Node.js</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Frontend & Design</h3>
+            <ul class="pill-list">
+              <li>React</li><li>HTML/CSS</li><li>Figma</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Machine Learning</h3>
+            <ul class="pill-list">
+              <li>YOLO Models</li><li>NumPy</li><li>Pandas</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Tools</h3>
+            <ul class="pill-list">
+              <li>Git</li><li>Docker</li><li>MATLAB</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Soft Skills</h3>
+            <ul class="pill-list">
+              <li>Leadership</li><li>Adaptability</li><li>Problem-Solving</li>
+              <li>Communication</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <h2>Certifications</h2>
+
+        <div class="cert-grid">
+
+          <article class="cert-card">
+            <h3>IT Specialist – Java</h3>
+            <p>Certiport</p>
+            <p class="cert-meta">Issued Nov 2025</p>
+          </article>
+
+          <article class="cert-card">
+            <h3>IT Specialist – Data Analytics</h3>
+            <p>Certiport</p>
+            <p class="cert-meta">Issued Nov 2025</p>
+          </article>
+
+          <article class="cert-card">
+            <h3>MOS Excel Associate</h3>
+            <p>Microsoft</p>
+          </article>
+
+          <article class="cert-card">
+            <h3>Data Mining Methods</h3>
+            <p>University of Colorado Boulder</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2>Education</h2>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <h3>Mapúa MCM</h3>
+            <p class="timeline-role">BS Computer Science</p>
+            <p class="timeline-meta">2023 – Present</p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Agusan National High School</h3>
+            <p class="timeline-role">Junior & Senior High School</p>
+            <p class="timeline-meta">2015 – 2023</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container two-column">
+
+        <div>
+          <h2>Get in Touch</h2>
+          <p>I’m open to roles in software engineering, backend development, and applied AI.</p>
+        </div>
+
+        <div class="contact-box">
+          <p><strong>Email:</strong> <a href="mailto:paluminarias@gmail.com">paluminarias@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+639952904537">(+63) 995-290-4537</a></p>
+          <p><strong>Location:</strong> Davao City, Philippines</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/Drewww17">github.com/Drewww17</a></p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Philip Andrew Luminarias</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
