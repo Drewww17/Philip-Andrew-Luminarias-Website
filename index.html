@@ -15,6 +15,7 @@
 
 <body>
 
+<!-- Scroll To Top -->
 <button id="scrollTopBtn">↑</button>
 
 <header class="site-header">
@@ -26,13 +27,13 @@
       <a href="#certifications">Certifications</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
-      <button id="themeToggle">◐</button>
+      <button id="themeToggle" aria-label="Toggle theme">◐</button>
     </div>
   </nav>
 
   <div class="hero">
     <div class="hero-content">
-      <img src="logo.png" class="hero-logo" alt="Logo">
+      <img src="logo.png" class="hero-logo" alt="Drew personal logo">
       <h1 class="hero-name">Philip Andrew Luminarias</h1>
       <p class="hero-sub">
         Backend Development · Machine Learning · Computer Vision · Data Analytics
@@ -47,181 +48,317 @@
 
 <main>
 
-<!-- ABOUT -->
-<section id="about" class="section reveal">
-  <div class="container two-column">
-    <div>
-      <h2>Professional Summary</h2>
-      <p>
-        Highly motivated Computer Science student with strong experience in backend development,
-        machine learning, computer vision, and data analytics. Demonstrates strong initiative through
-        independently developed projects, academic research, and multiple professional certifications.
-      </p>
-    </div>
-
-    <aside class="highlight-box glass">
-      <h3>Career Objective</h3>
-      <p>
-        To contribute to real-world software engineering, AI, and data-driven projects while expanding
-        my technical expertise and supporting organizational success.
-      </p>
-    </aside>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section section-alt reveal">
-  <div class="container">
-    <h2>Projects</h2>
-
-    <div class="projects-grid">
-
-      <article class="card tilt">
-        <h3>BookWise – ML-Enhanced Resource Booking System</h3>
-        <p class="role">Backend Developer</p>
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <div class="container two-column">
+      <div>
+        <h2>Professional Summary</h2>
         <p>
-          School resource booking system with room & lab scheduling, authentication, and booking logs.
+          Highly motivated and technically proficient Computer Science student with hands-on
+          experience in backend development, machine learning, computer vision, and data analytics.
+          Demonstrates strong initiative through independently developed software systems, academic
+          projects, and completion of multiple professional certifications.
         </p>
-        <ul class="pill-list">
-          <li>Node.js</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li><li>Docker</li>
-        </ul>
-      </article>
-
-      <article class="card tilt">
-        <h3>Pineapple Ripeness Detection (YOLOv)</h3>
-        <p class="role">Lead Developer</p>
         <p>
-          Computer vision model detecting ripeness phases using YOLOv8–v12.
+          Skilled in modern development technologies such as Node.js, Express, Prisma ORM,
+          PostgreSQL, YOLOv, Python, C#, and Java. Adept at delivering organized, functional,
+          and scalable solutions through self-directed learning and collaborative teamwork.
+          Actively seeking opportunities in software engineering, machine learning, data
+          analytics, or related fields.
         </p>
-        <ul class="pill-list">
-          <li>Python</li><li>YOLOv8</li><li>YOLOv11</li><li>YOLOv12</li>
-        </ul>
-      </article>
+      </div>
 
-      <article class="card tilt">
-        <h3>Coffee & Co POS System</h3>
-        <p class="role">Lead Developer</p>
+      <aside class="glass">
+        <h3>Career Objective</h3>
         <p>
-          Desktop POS with inventory tracking and sales analytics.
+          To apply and expand my knowledge in software development, machine learning, and
+          data-driven technologies by contributing to impactful real-world projects in an
+          innovative company. I aim to refine my skills while supporting organizational growth
+          through efficient problem-solving and high-quality work.
         </p>
-        <ul class="pill-list">
-          <li>C#</li><li>.NET</li><li>SQL</li>
-        </ul>
-      </article>
+        <p><strong>Location:</strong> New Washington Village, Ma-a, Davao City, 8000</p>
+      </aside>
+    </div>
+  </section>
 
-      <article class="card tilt">
-        <h3>CEA Slayers – Python Game</h3>
-        <p class="role">Project Head</p>
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-alt reveal">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+
+        <article class="card tilt">
+          <h3>BookWise: Machine Learning-Enhanced Resource Booking &amp; Tracking</h3>
+          <p class="role">Backend Project Developer</p>
+          <p>
+            School resource booking system for rooms, labs, and equipment with booking history and role-based access.
+          </p>
+          <ul class="pill-list">
+            <li>Node.js</li><li>Express.js</li><li>Prisma ORM</li><li>PostgreSQL</li><li>Docker</li>
+          </ul>
+          <ul>
+            <li>Built backend APIs using Node.js, Express, Prisma ORM, and PostgreSQL.</li>
+            <li>Implemented JWT-based authentication, sessions, and role-based access (admin, faculty, student).</li>
+            <li>Designed endpoints for room, lab, and equipment bookings plus booking history.</li>
+            <li>Containerized the backend with Docker for consistent development and deployment.</li>
+          </ul>
+        </article>
+
+        <article class="card tilt">
+          <h3>Systematic Pineapple Ripeness Phase Detection using YOLOv</h3>
+          <p class="role">Lead Project Developer</p>
+          <p>
+            Computer vision system to classify pineapple ripeness stages using YOLOv object detection.
+          </p>
+          <ul class="pill-list">
+            <li>YOLOv8</li><li>YOLOv11</li><li>YOLOv12</li><li>Python</li><li>Computer Vision</li>
+          </ul>
+          <ul>
+            <li>Designed and trained YOLOv8, YOLOv11, and YOLOv12 models to classify ripeness stages.</li>
+            <li>Collected, labeled, and preprocessed image datasets; used augmentation and hyperparameter tuning.</li>
+            <li>Integrated the model into an application for near real-time detection via camera or uploads.</li>
+            <li>Evaluated model performance and iteratively improved accuracy and inference speed.</li>
+          </ul>
+        </article>
+
+        <article class="card tilt">
+          <h3>Coffee &amp; Co: SMEs Business POS / Management Application</h3>
+          <p class="role">Lead Project Developer</p>
+          <p>
+            Desktop POS and management system for small businesses with inventory tracking and analytics.
+          </p>
+          <ul class="pill-list">
+            <li>C#</li><li>.NET</li><li>SQL Database</li>
+          </ul>
+          <ul>
+            <li>Created a C#/.NET desktop POS system with SQL database integration.</li>
+            <li>Implemented product catalog, sales processing, and daily sales summaries.</li>
+            <li>Added inventory tracking with low-stock indicators and basic analytics for business decisions.</li>
+          </ul>
+        </article>
+
+        <article class="card tilt">
+          <h3>CEA Slayers: Python Game Development</h3>
+          <p class="role">Game Design &amp; Project Head</p>
+          <p>
+            2D arcade-style game built with Python (Pygame) using an OOP architecture.
+          </p>
+          <ul class="pill-list">
+            <li>Python</li><li>Pygame</li><li>OOP</li>
+          </ul>
+          <ul>
+            <li>Developed a 2D arcade-style game in Python with multiple levels and enemies.</li>
+            <li>Used object-oriented programming for player, enemy, and game-state management.</li>
+            <li>Coordinated a small team for assets, balancing, and testing.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section reveal">
+    <div class="container">
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+        <div>
+          <h3>Programming Languages</h3>
+          <ul class="pill-list">
+            <li>C</li><li>C#</li><li>C++</li><li>Java</li>
+            <li>Python</li><li>R</li><li>JavaScript</li><li>TypeScript</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Backend</h3>
+          <ul class="pill-list">
+            <li>Node.js</li><li>Express.js</li><li>Prisma ORM</li><li>PostgreSQL</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Frontend &amp; UI/UX</h3>
+          <ul class="pill-list">
+            <li>React</li><li>Basic HTML/CSS</li><li>Figma</li>
+            <li>Wireframing &amp; Prototyping</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Data &amp; Machine Learning</h3>
+          <ul class="pill-list">
+            <li>YOLOv Algorithm</li><li>Scikit-learn</li><li>Pandas</li>
+            <li>NumPy</li><li>Basic Data Visualization</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Tools</h3>
+          <ul class="pill-list">
+            <li>Git</li><li>Docker</li><li>MATLAB</li>
+            <li>Microsoft Office 365</li><li>Google Workspace</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Soft Skills</h3>
+          <ul class="pill-list">
+            <li>Time Management</li><li>Adaptability</li><li>Flexibility</li>
+            <li>Team Leadership</li><li>Initiative &amp; Proactiveness</li>
+            <li>Problem-Solving</li><li>Communication</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Languages</h3>
+          <ul class="pill-list">
+            <li>English</li><li>Tagalog</li><li>Cebuano</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section section-alt reveal">
+    <div class="container">
+      <h2>Certifications</h2>
+
+      <div class="cert-grid">
+
+        <div class="cert-card glass">
+          <h3>IT Specialist – Java</h3>
+          <p>Certiport – A Pearson VUE Business</p>
+          <p>Issued Nov 2025 · Expires Nov 2030</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>IT Specialist – Data Analytics</h3>
+          <p>Certiport – A Pearson VUE Business</p>
+          <p>Issued Nov 2025 · Expires Nov 2030</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Microsoft Office Specialist: Excel Associate (Microsoft 365 Apps)</h3>
+          <p>Microsoft</p>
+          <p>Issued Oct 2025 · Expires Oct 2030</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Data Mining Methods</h3>
+          <p>University of Colorado Boulder</p>
+          <p>Issued Sep 2025 · Credential ID CUQH4ZDENI55</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Introduction to Computers and Office Productivity Software</h3>
+          <p>The Hong Kong University of Science and Technology</p>
+          <p>Issued Sep 2025 · Credential ID RXRTZK0V3Z5P</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Build Wireframes and Low-Fidelity Prototypes</h3>
+          <p>Google</p>
+          <p>Issued Jul 2025 · Credential ID 70U90NQC6DEK</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Conduct UX Research and Test Early Concepts</h3>
+          <p>Google</p>
+          <p>Issued Jul 2025 · Credential ID 3UDKNP7V72T2</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Create High-Fidelity Designs and Prototypes in Figma</h3>
+          <p>Google</p>
+          <p>Issued Jul 2025 · Credential ID YNDZ137QXSRB</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Foundations of User Experience (UX) Design</h3>
+          <p>Google</p>
+          <p>Issued Jul 2025 · Credential ID WA4120SZMHUH</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>What is Data Science?</h3>
+          <p>IBM</p>
+          <p>Issued Jul 2025 · Credential ID MF62WABRE521</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Data Science Orientation</h3>
+          <p>IBM</p>
+          <p>Issued Jun 2025</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Introduction to User Experience Design</h3>
+          <p>Georgia Institute of Technology</p>
+          <p>Issued May 2025 · Credential ID FWZN6M2AKWIX</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Foundational MATLAB</h3>
+          <p>MathWorks</p>
+          <p>Issued Oct 2024</p>
+        </div>
+
+        <div class="cert-card glass">
+          <h3>Foundations of Cybersecurity</h3>
+          <p>Google</p>
+          <p>Issued Apr 2024 · Credential ID UKN7WYD38ES5</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section reveal">
+    <div class="container">
+      <h2>Education</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Mapúa Malayan Colleges Mindanao, Davao City</h3>
+          <p>Bachelor of Science in Computer Science</p>
+          <p>Aug 2023 – Present</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Agusan National High School, Butuan City</h3>
+          <p>High School and Senior High School</p>
+          <p>Jun 2015 – Aug 2023</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt reveal">
+    <div class="container two-column">
+      <div>
+        <h2>Contact</h2>
         <p>
-          2D arcade-style OOP-based Python game with enemies and level progression.
+          I’m open to roles in software engineering, backend development, data analytics,
+          and applied AI / computer vision.
         </p>
-        <ul class="pill-list">
-          <li>Python</li><li>Pygame</li><li>OOP</li>
-        </ul>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section reveal">
-  <div class="container">
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-      <div>
-        <h3>Programming</h3>
-        <ul class="pill-list">
-          <li>C</li><li>C#</li><li>C++</li><li>Java</li>
-          <li>Python</li><li>R</li><li>JavaScript</li><li>TypeScript</li>
-        </ul>
       </div>
 
-      <div>
-        <h3>Backend</h3>
-        <ul class="pill-list">
-          <li>Node.js</li><li>Express.js</li><li>Prisma ORM</li><li>PostgreSQL</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>AI / ML</h3>
-        <ul class="pill-list">
-          <li>YOLOv</li><li>NumPy</li><li>Pandas</li><li>Scikit-learn</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Soft Skills</h3>
-        <ul class="pill-list">
-          <li>Leadership</li><li>Communication</li><li>Adaptability</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Languages</h3>
-        <ul class="pill-list">
-          <li>English</li><li>Tagalog</li><li>Cebuano</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications" class="section section-alt reveal">
-  <div class="container">
-    <h2>Certifications</h2>
-
-    <div class="cert-grid">
-
-      <div class="cert-card glass"><h3>IT Specialist – Java</h3><p>Certiport</p></div>
-      <div class="cert-card glass"><h3>IT Specialist – Data Analytics</h3><p>Certiport</p></div>
-      <div class="cert-card glass"><h3>MOS Excel Associate</h3><p>Microsoft</p></div>
-      <div class="cert-card glass"><h3>Data Mining Methods</h3><p>UC Boulder</p></div>
-      <div class="cert-card glass"><h3>User Experience Design</h3><p>Google</p></div>
-
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" class="section reveal">
-  <div class="container">
-    <h2>Education</h2>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Mapúa MCM</h3>
-        <p>BS Computer Science — 2023–Present</p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>Agusan National High School</h3>
-        <p>2015–2023</p>
+      <div class="contact-box glass">
+        <p><strong>Name:</strong> Philip Andrew Luminarias</p>
+        <p><strong>Location:</strong> New Washington Village, Ma-a, Davao City, 8000</p>
+        <p><strong>Email:</strong> <a href="mailto:paluminarias@gmail.com">paluminarias@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+639952904537">(+63) 995-290-4537</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Drewww17" target="_blank">github.com/Drewww17</a></p>
+        <p><strong>LinkedIn:</strong> Philip Andrew Luminarias</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section section-alt reveal">
-  <div class="container two-column">
-    <div>
-      <h2>Contact</h2>
-      <p>Email · Phone · GitHub · LinkedIn</p>
-    </div>
-
-    <div class="contact-box glass">
-      <p>Email: <a href="mailto:paluminarias@gmail.com">paluminarias@gmail.com</a></p>
-      <p>Phone: <a href="tel:+639952904537">(+63) 995-290-4537</a></p>
-      <p>GitHub: <a href="https://github.com/Drewww17">Drewww17</a></p>
-      <p>Location: Davao City, Philippines</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
@@ -232,7 +369,6 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
 
